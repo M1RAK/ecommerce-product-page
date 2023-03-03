@@ -11,7 +11,9 @@ function toggle() {
 menuToggler.addEventListener("click", toggle)
 
 listLinks.forEach((link) => {
-  link.addEventListener("click", toggle)
+  link.addEventListener("click", () => {
+    linksContainer.classList.remove("active")
+  })
 })
 
 // Lightbox toggle
