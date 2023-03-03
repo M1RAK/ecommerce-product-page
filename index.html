@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <header>
+    <!-- Overlay -->
+    <div id="overlay"></div>
+    <!-- Navbar -->
+    <nav>
+      <!-- Mobile-menu -->
+      <i class="toggle">
+        <div class="toggle-burger"></div>
+      </i>
+      <!-- Nav-Links -->
+      <a class="logo" href="/">
+        <img src="./images/logo.svg" alt="logo" />
+      </a>
+      <div class="links-container">
+        <a href="#" class="list-link">
+          <li>Collections</li>
+        </a>
+        <a href="#" class="list-link">
+          <li>Men</li>
+        </a>
+        <a href="#" class="list-link">
+          <li>Women</li>
+        </a>
+        <a href="#" class="list-link">
+          <li>About</li>
+        </a>
+        <a href="#" class="list-link">
+          <li>Contact</li>
+        </a>
+      </div>
+      <!-- End of Nav-Links -->
+
+      <li class="cart-icon">
+        <span>
+          <b class="cart-length"> 0 </b>
+        </span>
+        <img src="./images/icon-cart.svg" alt="Cart-logo" />
+      </li>
+      <li>
+        <img class="avatar" src="./images/image-avatar.png" alt="image-avatar" />
+      </li>
+
+      <!-- Cart-container -->
+
+      <div class="cart-container">
+        <h5>
+          Cart
+        </h5>
+        <hr>
+        <div class="cart-item"> 
+          <div class="text-center">
+            <p>
+              Your cart is empty.
+            </p>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End  -->
+    <hr />
+  </header>
+  <body>
+    <main>
+      <div class="grid-container">
+        <!-- Left Grid -->
+        <div class="grid-left">
+          <!-- Hero-Img -->
+          <div class="hero-image">
+            <img src="./images/image-product-1.jpg" alt="hero-image" />
+          </div>
+          <!-- Images-Sm -->
+          <div class="image-grid">
+                <!-- Images used to open the lightbox --> 
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="image-product-1"
+              class="sm-image"
+              onclick="currentSlide(1)"
+            />
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="image-product-2"
+              class="sm-image"
+              onclick="currentSlide(2)"
+            />
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="image-product-3"
+              class="sm-image"
+              onclick="currentSlide(3)"
+            />
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="image-product-4"
+              class="sm-image"
+              onclick="currentSlide(4)"
+            />
+          </div>
+        </div>
+        <!--  Left Grid End -->
+
+        <!--  Right Grid -->
+        <div class="grid-right">
+           <h3>Sneaker Company</h3>
+
+        <h2>Fall Limited Edition Sneakers</h2>
+
+        <p>
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+
+        <div class="price-data">
+          <span class="discount-price"> $125.00 </span>
+          <span class="discount-percentage" ><b> 50%</b> </span>
+        </div>
+        <span class="real-price">$250.00</span>
+
+        <div class="price-toggle">
+          <span onclick="counter(-1)" class="minus">
+            <img  src="./images/icon-minus.svg" alt="">
+          </span>
+
+          <span class="amount">0</span>
+
+          <span onclick="counter(1)" class="plus">
+            <img  src="./images/icon-plus.svg" alt="">
+          </span>
+
+          <button class="cart-button">
+            <i>
+              <img src="./images/icon-cart.svg" alt="cart">
+            </i>
+            <p>Add to cart</p>
+          </button>
+        </div>
+        <!--  Right Grid End -->
+      </div>
+        </div>
+       <!-- Lightbox -->
+        <div class="lightbox-container">
+          <span class="lightbox-close">
+            &times;
+          </span>
+          <!-- Hero-Img -->
+          <div class="lightbox-image">
+            <span class="prev" onclick="toggleSlide(-1)">
+                <img  src="./images/icon-previous.svg" class="icon-prev" alt="icon-previous">
+            </span>
+           <div class="hero-lg">
+             <img src="./images/image-product-1.jpg" class="hero" alt="hero-image" />
+           </div>
+            <span class="next" onclick="toggleSlide(1)">
+              <img src="./images/icon-next.svg" class="icon-next" alt="icon-next">
+            </span>
+          </div>
+          <!-- Images-Sm -->
+          <div class="image-grid">
+                <!-- Images used to toggle the lightbox -->
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="image-product-1"
+              class="sm-image lg"
+              onclick="currentSlide(1)"
+            />
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="image-product-2"
+              class="sm-image lg"
+              onclick="currentSlide(2)"
+            />
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="image-product-3"
+              class="sm-image lg"
+              onclick="currentSlide(3)"
+            />
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="image-product-4"
+              class="sm-image lg"
+              onclick="currentSlide(4)"
+            />
+        </div>
+        <!-- End of lightbox -->
+    </main>
+    <script src="./js/index.js"></script>
+    <script src="./js/cart.js"></script>
+  </body>
+</html>
