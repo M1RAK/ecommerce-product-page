@@ -109,7 +109,7 @@ nav{
 
 .list-link{
   margin: 0 1rem;
-  color: var(--Black);
+  color: var(--Dark-grayish-blue);
 }
 
 
@@ -248,7 +248,7 @@ h5{
 .checkout-button{
   margin:.9rem 1rem;
   color: var(--White);
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
   width: 90%;
   background-color: var(--Orange);
   border: none;
@@ -288,7 +288,7 @@ h5{
 
 .hero-image{
   margin-top: 10rem;
-  max-width: 500px;
+  max-width: 450px;
   height: auto;
 }
 
@@ -308,8 +308,8 @@ h5{
 }
 
 .sm-image{
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
   margin: 0 .7rem;
   border-radius: 9px;
 }
@@ -325,7 +325,7 @@ h5{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin:0rem 1rem;
+  margin:0rem 1.25rem;
 }
 
 .grid-right h3{
@@ -396,7 +396,7 @@ h5{
   font-family: "Kumbh Sans", sans-serif;
   width: 100%;
   height: 45px;
-  min-width: 205px;
+  width: 180px;
   border: none;
   border-radius: 5px;
   color: var(--White);
