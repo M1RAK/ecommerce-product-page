@@ -223,7 +223,7 @@ h5{
   padding-bottom:1.5rem;
   top: 7rem;
   right:1%;
-  width: 310px;
+  width: 325px;
   background-color: var(--White);
   height:auto;
   box-shadow: var(--shadow-4);
@@ -241,8 +241,13 @@ h5{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 1.2rem 1rem;
 
+}
+
+.cart-list p{
+  white-space: nowrap;
+  font-size: .9rem;
 }
 
 .checkout-button{
