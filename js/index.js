@@ -64,20 +64,23 @@ function slideShow(n) {
    <img src="./images/image-product-${slideIndex}.jpg" class="hero" alt="hero-image" />`
 
   // Checks if lightbox Container is active; disables image toggle on main hero
-  slides.innerHTML = `
-  <span class="prev" onclick="toggleSlide(-1)">
-  <img  src="./images/icon-previous.svg" class="icon-prev" alt="icon-previous">
-</span>
-  <img class="main-img" src="./images/image-product-${slideIndex}.jpg" alt="hero-image" />
-  <span class="next" onclick="toggleSlide(1)">
-  <img src="./images/icon-next.svg" class="icon-next" alt="icon-next">
-</span>`
 
-  if(window.innerWidth > 900){
+  if(window.innerWidth > 800){
     slides.innerHTML = `
     <img class="main-img" src="./images/image-product-${
       lightboxContainer.classList.contains("active") ? 1 : slideIndex
     }.jpg" alt="hero-image" />`
+  } 
+  
+  if(window.innerWidth < 800){
+    slides.innerHTML = `
+    <span class="prev" onclick="toggleSlide(-1)">
+    <img  src="./images/icon-previous.svg" class="icon-prev" alt="icon-previous">
+  </span>
+    <img class="main-img" src="./images/image-product-${slideIndex}.jpg" alt="hero-image" />
+    <span class="next" onclick="toggleSlide(1)">
+    <img src="./images/icon-next.svg" class="icon-next" alt="icon-next">
+  </span>`
   }
 
   smImages.forEach((img) => img.classList.remove("active"))
@@ -86,3 +89,8 @@ function slideShow(n) {
 
   // Because [] are zero indexed; Element 1 - 1 = 1
 }
+
+// Adds and removes the next and prev btns on main
+window.addEventListener('resize', () => {
+  slideShow(1)
+})
