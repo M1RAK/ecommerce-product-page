@@ -34,6 +34,7 @@
         <img src="./images/logo.svg" alt="logo" />
       </a>
       <div class="links-container">
+        <ul>
         <a href="/" class="list-link">
           <li>Collections</li>
         </a>
@@ -49,18 +50,20 @@
         <a href="/" class="list-link">
           <li>Contact</li>
         </a>
+      </ul>
       </div>
       <!-- End of Nav-Links -->
 
-      <li class="cart-icon">
+      <div class="cart-icon">
         <span>
           <b class="cart-length"> 0 </b>
         </span>
         <img src="./images/icon-cart.svg" alt="Cart-logo" />
-      </li>
-      <li>
+      </div>
+      <div>
         <img class="avatar" src="./images/image-avatar.png" alt="image-avatar" />
-      </li>
+      </div>
+    
 
       <!-- Cart-container -->
 
@@ -88,7 +91,13 @@
         <div class="grid-left">
           <!-- Hero-Img -->
           <div class="hero-image">
-            <img src="./images/image-product-1.jpg" alt="hero-image" />
+            <span class="prev" onclick="toggleSlide(-1)">
+              <img  src="./images/icon-previous.svg" class="icon-prev" alt="icon-previous">
+            </span>
+              <img class="main-img" src="./images/image-product-1.jpg" alt="hero-image" />
+              <span class="next" onclick="toggleSlide(1)">
+              <img src="./images/icon-next.svg" class="icon-next" alt="icon-next">
+            </span>
           </div>
           <!-- Images-Sm -->
           <div class="image-grid">
@@ -125,7 +134,7 @@
         <div class="grid-right">
            <h3>Sneaker Company</h3>
 
-        <h2>Fall Limited Edition Sneakers</h2>
+        <h1>Fall Limited Edition Sneakers</h1>
 
         <p>
           These low-profile sneakers are your perfect casual wear companion.
@@ -134,11 +143,14 @@
         </p>
 
         <div class="price-data">
-          <span class="discount-price"> $125.00 </span>
+          <div>
+            <span class="discount-price"> $125.00 </span>
           <span class="discount-percentage" ><b> 50%</b> </span>
+          </div>
+          <span class="real-price">$250.00</span>
         </div>
-        <span class="real-price">$250.00</span>
 
+       <div class="price-meta">
         <div class="price-toggle">
           <span onclick="counter(-1)" class="minus">
             <img  src="./images/icon-minus.svg" alt="">
@@ -149,14 +161,14 @@
           <span onclick="counter(1)" class="plus">
             <img  src="./images/icon-plus.svg" alt="">
           </span>
-
+        </div>
           <button class="cart-button">
             <i>
               <img src="./images/icon-cart.svg" alt="cart">
             </i>
             <p>Add to cart</p>
           </button>
-        </div>
+       </div>
         <!--  Right Grid End -->
       </div>
         </div>
@@ -207,10 +219,12 @@
         </div>
         <!-- End of lightbox -->
     </main>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://www.frontendmentor.io/profile/M1RAK">M1RAK</a>.
-    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://www.frontendmentor.io/profile/M1RAK">M1RAK</a>.
+      </div>
+    </footer>
     <script src="./js/index.js"></script>
     <script src="./js/cart.js"></script>
   </body>

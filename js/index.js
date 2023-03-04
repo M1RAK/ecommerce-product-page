@@ -24,7 +24,7 @@ const lightboxClose = document.querySelector(".lightbox-close")
 
 // Close Functionality makes image-grid work by removing ".active"
 const toggleLightbox = () => {
-  if(window.innerWidth < 450) return
+  if(window.innerWidth < 900) return
   overLay.classList.toggle("active")
   lightboxContainer.classList.toggle("active")
 }
@@ -65,9 +65,20 @@ function slideShow(n) {
 
   // Checks if lightbox Container is active; disables image toggle on main hero
   slides.innerHTML = `
-   <img src="./images/image-product-${
-     lightboxContainer.classList.contains("active") ? 1 : slideIndex
-   }.jpg" alt="hero-image" />`
+  <span class="prev" onclick="toggleSlide(-1)">
+  <img  src="./images/icon-previous.svg" class="icon-prev" alt="icon-previous">
+</span>
+  <img class='main-img' src="./images/image-product-${slideIndex}.jpg" alt="hero-image" />
+  <span class="next" onclick="toggleSlide(1)">
+  <img src="./images/icon-next.svg" class="icon-next" alt="icon-next">
+</span>`
+
+  if(window.innerWidth > 900){
+    slides.innerHTML = `
+    <img src="./images/image-product-${
+      lightboxContainer.classList.contains("active") ? 1 : slideIndex
+    }.jpg" alt="hero-image" />`
+  }
 
   smImages.forEach((img) => img.classList.remove("active"))
 

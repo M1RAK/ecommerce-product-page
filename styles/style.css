@@ -91,7 +91,9 @@ nav{
   display: flex;
   align-items: center;
 }
-
+ ul,ol {
+  display: flex;
+}
 .links-container.active{
   display: flex;
   flex-direction: column;
@@ -123,8 +125,8 @@ nav{
 }
 
  .avatar{
-  min-width: 60px;
-  height: 60px;
+  min-width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
@@ -220,9 +222,9 @@ h5{
 .cart-container{
   position: absolute;
   padding-bottom:1.5rem;
-  top: 8rem;
-  right:2%;
-  width: 350px;
+  top: 7rem;
+  right:1%;
+  width: 310px;
   background-color: var(--White);
   height:auto;
   box-shadow: var(--shadow-4);
@@ -273,22 +275,25 @@ h5{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 2rem;
+  overflow: hidden;
 }
 
 /* Grid-Left */
 .grid-left{
+  margin-top: -7.5rem;
   display: flex; 
   flex-direction: column;
   align-items: center;
+  /* z-index: -1; */
 }
 
 .hero-image{
-  margin-top: 6rem;
+  margin-top: 10rem;
   max-width: 500px;
   height: auto;
 }
 
-.hero-image img{
+.hero-image .main-img{
   width: 100%;
   height: 80%;
   border-radius: 15px;
@@ -317,7 +322,7 @@ h5{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 2rem;
+  margin:0rem 1rem;
 }
 
 .grid-right h3{
@@ -326,14 +331,17 @@ h5{
   margin-bottom: 1.5rem;
 }
 
-.grid-right h2{
+.grid-right h1{
   font-size: 3rem;
   line-height: 2.5rem;
   margin-bottom: 3rem;
 }
 
 .price-data{
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin: 1rem 0;
 }
 
 .discount-price{
@@ -349,11 +357,16 @@ h5{
 }
 
 .real-price{
+  display: block;
   margin: 1rem 0;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--Grayish-blue);
 }
+
+.price-meta{
+  display: flex;
+ }
 
 .price-toggle{
   display: flex;
@@ -377,11 +390,13 @@ h5{
   font-size: 1.1rem;
   font-weight: 700;
   font-family: "Kumbh Sans", sans-serif;
-  width: 55%;
-  min-width: 145px;
+  width: 100%;
+  height: 45px;
+  min-width: 205px;
   border: none;
   border-radius: 5px;
   color: var(--White);
+  margin-bottom: 1rem;
 }
 
 .cart-button:active{
@@ -460,8 +475,7 @@ background-color: var(--White);
 }
 
 .attribution { margin-top: 1rem; font-size: 14px; text-align: center; }
-.attribution a { color: hsl(228, 70%, 48%); }
-
+.attribution a { color: hsl(228, 45%, 44%); }
 /* End of Lightbox */
 /* @media styles */
 @media (max-width:1000px){
@@ -470,7 +484,30 @@ background-color: var(--White);
   }
 }
 @media (max-width:900px) {
- 
+  .hero-image{
+    position: relative;
+    /* display: flex; */
+  }
+  .hero-image .prev,.next{
+    position: absolute;
+    top: 50%;
+    max-height: 50px;
+  }
+
+  .prev img,.next img{
+   width: 100%;
+   height:100%;
+  }
+
+  .next{
+    padding: .5rem;
+    padding-left: .7rem;
+  }
+  .prev{
+    padding: .5rem;
+    padding-right: .7rem;
+  }
+
   .links-container{
     display: none;
   }
@@ -494,6 +531,7 @@ background-color: var(--White);
 
 @media (max-width:800px){
   .grid-container{
+    margin-top: -1.5rem;
     display: flex;
     flex-direction: column;
   }
@@ -501,23 +539,72 @@ background-color: var(--White);
     max-width: 650px;
   }
   .image-grid{
-    margin-top: 0;
+    display: none;
    }
    .lightbox-close{
     position: absolute;
     top: -2rem;
+   }
+   hr{
+    display: none;
+   }
+   ul{
+    display: flex;
+    flex-direction: column;
+   }
+   .grid-right h1 {
+    font-size: 2rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+   }
+   .grid-right p {
+    line-height: 1.5rem;
+   }
+   .real-price{
+    display: inline-flex;
+    margin-left: auto;
+    text-decoration: line-through;
+   }
+   .price-toggle{
+    justify-content: space-between;
+    padding: 0 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color:var(--Light-grayish-blue);
+    border-radius: 5px;
+   }
+   .price-toggle span{
+    width: 20px;
+   }
+   .price-meta{
+    display: flex;
+    flex-direction: column;
+   }
+   .price-data{
+    flex-direction: row;
+    align-items: center;
    }
 }
 
 @media (max-width:450px){
 
   body{
-     margin: .8rem;
+     margin: 0rem;
+   }
+   .toggle{
+    margin: 0 .3rem;
    }
    .sm-image{
      height: 65px;
      width: 65px;
      margin: 0 .3rem;
      border-radius: 5px;
+   }
+   .hero-image {
+    margin-top: 6rem;
+   }
+   img{
+    width: 100%;
+    border-radius: 0;
    }
  }
