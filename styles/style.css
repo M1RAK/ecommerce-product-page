@@ -91,9 +91,7 @@ nav{
   display: flex;
   align-items: center;
 }
- ul,ol {
-  display: flex;
-}
+
 .links-container.active{
   display: flex;
   flex-direction: column;
@@ -111,13 +109,14 @@ nav{
 
 .list-link{
   margin: 0 1rem;
+  color: var(--Black);
 }
 
 
 .list-link:hover::after{
   content: "";
   position: relative;
-  top: 3.5rem;
+  top: 3.25rem;
   display: block;
   height: 4px;
   background-color: var(--Orange);
@@ -156,7 +155,7 @@ nav{
 }
 
 hr{
-  opacity: .7;
+  opacity: .3;
 }
 
 /* Mobile Menu */
@@ -366,6 +365,7 @@ h5{
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--Grayish-blue);
+  text-decoration: line-through;
 }
 
 .price-meta{
@@ -479,7 +479,7 @@ background-color: var(--White);
 }
 
 .attribution { margin-top: 1rem; font-size: 14px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: var(--Orange); }
 /* End of Lightbox */
 /* @media styles */
 @media (max-width:1000px){
@@ -571,7 +571,6 @@ background-color: var(--White);
    .real-price{
     display: inline-flex;
     margin-left: auto;
-    text-decoration: line-through;
    }
    .price-toggle{
     justify-content: space-between;
