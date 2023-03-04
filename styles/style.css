@@ -505,7 +505,7 @@ background-color: var(--White);
    }
    .lightbox-close{
     position: absolute;
-    top: 5rem;
+    top: -2rem;
    }
 }
 
