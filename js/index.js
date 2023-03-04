@@ -24,6 +24,7 @@ const lightboxClose = document.querySelector(".lightbox-close")
 
 // Close Functionality makes image-grid work by removing ".active"
 const toggleLightbox = () => {
+  if(window.innerWidth < 450) return
   overLay.classList.toggle("active")
   lightboxContainer.classList.toggle("active")
 }

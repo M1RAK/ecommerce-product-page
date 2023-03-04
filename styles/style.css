@@ -459,6 +459,8 @@ background-color: var(--White);
   margin: 3rem 0;
 }
 
+.attribution { margin-top: 1rem; font-size: 14px; text-align: center; }
+.attribution a { color: hsl(228, 70%, 48%); }
 
 /* End of Lightbox */
 /* @media styles */
@@ -498,6 +500,13 @@ background-color: var(--White);
   .grid-right{
     max-width: 650px;
   }
+  .image-grid{
+    margin-top: 0;
+   }
+   .lightbox-close{
+    position: absolute;
+    top: 5rem;
+   }
 }
 
 @media (max-width:450px){
